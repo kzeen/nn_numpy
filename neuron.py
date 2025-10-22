@@ -15,13 +15,14 @@ class Neuron:
         weighted_sum = (self.weights @ inputs) + self.bias
         return sigmoid(weighted_sum)
     
-# Sample run with random values
-weights = np.array([0, 1])
-bias = 4
+if __name__ == "__main__":
+    # Sample run with random values
+    weights = np.array([0, 1])
+    bias = 4
 
-neuron = Neuron(weights, bias)
+    neuron = Neuron(weights, bias)
 
-x = np.array([2, 3])
-y = neuron.feedforward(x)
+    x = np.array([2, 3])
+    y = neuron.feedforward(x)
 
-print(y)
+    print(y)
